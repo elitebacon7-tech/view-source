@@ -1,126 +1,434 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Create Without Permission</title>
+```
+<title>Create Without Permission</title>
 
-    <link rel="stylesheet" href="style.css">
+<style>
+
+    
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        background: #111;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main {
+        overflow: hidden;
+    }
+
+
+   
+
+    .opening {
+        min-height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 8vw;
+
+        border-bottom: 1px solid white;
+    }
+
+    .opening h1 {
+        margin: 0;
+        line-height: 0.8;
+        text-transform: uppercase;
+    }
+
+    .create {
+        display: block;
+
+        font-size: 18vw;
+        font-weight: 900;
+        letter-spacing: -0.08em;
+    }
+
+    .without {
+        display: block;
+
+        font-size: 8vw;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+
+        margin-left: 8vw;
+    }
+
+    .permission {
+        display: block;
+
+        font-size: 8vw;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+
+        margin-left: 16vw;
+    }
+
+    .intro-text {
+        max-width: 600px;
+
+        margin-top: 8vw;
+
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+
+
+
+    .manifesto {
+        max-width: 1000px;
+
+        padding: 15vw 10vw;
+    }
+
+    .manifesto p {
+        margin: 0 0 12vw 0;
+
+        font-size: 3vw;
+        line-height: 1.25;
+        font-weight: 500;
+    }
+
+
+    
+
+    .creative-section {
+        min-height: 100vh;
+
+        padding: 10vw 5vw;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .creative-word {
+        display: flex;
+
+        width: fit-content;
+
+        font-size: 12vw;
+        font-weight: 900;
+        line-height: 0.85;
+        letter-spacing: -0.05em;
+
+        margin: 8vw 0;
+    }
+
+    .creative-word span {
+        display: inline-block;
+
+        transition: transform 0.2s ease;
+    }
+
+
+    
+
+    .experiment {
+        margin-left: 5vw;
+    }
+
+    .experiment span:nth-child(odd) {
+        transform: rotate(-4deg);
+    }
+
+    .experiment span:nth-child(even) {
+        transform: rotate(4deg);
+    }
+
+
+  
+
+    .fail {
+        margin-left: 35vw;
+    }
+
+    .fail span:nth-child(odd) {
+        transform: rotate(5deg);
+    }
+
+    .fail span:nth-child(even) {
+        transform: rotate(-5deg);
+    }
+
+
+    
+
+    .remix {
+        margin-left: 12vw;
+    }
+
+    .remix span:nth-child(odd) {
+        transform: rotate(-6deg);
+    }
+
+    .remix span:nth-child(even) {
+        transform: rotate(6deg);
+    }
+
+
+    
+
+    .ending {
+        padding: 15vw 8vw;
+    }
+
+    .ending > p {
+        max-width: 750px;
+
+        font-size: 28px;
+        line-height: 1.5;
+    }
+
+    .ending h2 {
+        margin: 12vw 0;
+
+        font-size: 8vw;
+        line-height: 0.85;
+        letter-spacing: -0.06em;
+    }
+
+    .final-message {
+        margin-top: 20vw;
+    }
+
+    .final-message strong {
+        display: block;
+
+        margin-top: 30px;
+
+        font-size: 1.5em;
+    }
+
+
+
+
+    footer {
+        padding: 50px 8vw;
+
+        border-top: 1px solid white;
+    }
+
+    footer a {
+        color: white;
+
+        font-size: 18px;
+        font-weight: bold;
+
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+
+    
+
+    @media (max-width: 700px) {
+
+        .create {
+            font-size: 23vw;
+        }
+
+        .without,
+        .permission {
+            font-size: 12vw;
+        }
+
+        .without {
+            margin-left: 0;
+        }
+
+        .permission {
+            margin-left: 5vw;
+        }
+
+        .intro-text {
+            font-size: 18px;
+        }
+
+        .manifesto p {
+            font-size: 6vw;
+        }
+
+        .creative-word {
+            font-size: 17vw;
+        }
+
+        .experiment {
+            margin-left: 0;
+        }
+
+        .fail {
+            margin-left: 20vw;
+        }
+
+        .remix {
+            margin-left: 5vw;
+        }
+
+        .ending h2 {
+            font-size: 12vw;
+        }
+
+    }
+
+</style>
+
+
 </head>
 
 <body>
 
-    <main>
 
-      
-        <section class="opening">
+<main>
 
-            <h1>
-                <span class="create">CREATE</span>
-                <span class="without">WITHOUT</span>
-                <span class="permission">PERMISSION.</span>
-            </h1>
+    
 
-            <p class="intro-text">
-                The web was built as a place to share ideas,
-                but creativity should never need permission.
+    <section class="opening">
+
+        <h1>
+            <span class="create">CREATE</span>
+            <span class="without">WITHOUT</span>
+            <span class="permission">PERMISSION.</span>
+        </h1>
+
+        <p class="intro-text">
+            The web was built as a place to share ideas,
+            but creativity should never need permission.
+        </p>
+
+    </section>
+
+
+  
+
+    <section class="manifesto">
+
+        <p>
+            We should be free to make, experiment, remix,
+            fail, and create something completely new.
+        </p>
+
+        <p>
+            Art does not need to be useful.
+            Ideas do not need to be approved.
+            Creativity does not need to follow a trend.
+        </p>
+
+        <p>
+            The internet gives everyone the ability to create,
+            yet platforms, algorithms, and expectations can
+            pressure us to make what is popular instead of
+            what is meaningful.
+        </p>
+
+    </section>
+
+
+
+
+    <section class="creative-section">
+
+        <div class="creative-word experiment">
+            <span>E</span>
+            <span>X</span>
+            <span>P</span>
+            <span>E</span>
+            <span>R</span>
+            <span>I</span>
+            <span>M</span>
+            <span>E</span>
+            <span>N</span>
+            <span>T</span>
+        </div>
+
+        <div class="creative-word fail">
+            <span>F</span>
+            <span>A</span>
+            <span>I</span>
+            <span>L</span>
+        </div>
+
+        <div class="creative-word remix">
+            <span>R</span>
+            <span>E</span>
+            <span>M</span>
+            <span>I</span>
+            <span>X</span>
+        </div>
+
+    </section>
+
+
+
+
+    <section class="ending">
+
+        <p>
+            We should create because we have something to say,
+            not because we are guaranteed attention.
+        </p>
+
+        <h2>
+            MAKE WHAT YOU WANT.
+        </h2>
+
+        <h2>
+            SHARE WHAT YOU BELIEVE.
+        </h2>
+
+        <h2>
+            CREATE WITHOUT FEAR.
+        </h2>
+
+        <p class="final-message">
+            The web should not tell us what to create.
+            <strong>It should give us the freedom to create.</strong>
+        </p>
+
+    </section>
+ 
+
+         <footer>
+
+            ```
+            <p class="source-label">
+                RESEARCH / CREATIVE THINKING
             </p>
 
-        </section>
-
-
-      
-        <section class="manifesto">
-
-            <p>
-                We should be free to make, experiment, remix,
-                fail, and create something completely new.
-            </p>
-
-            <p>
-                Art does not need to be useful.
-                Ideas do not need to be approved.
-                Creativity does not need to follow a trend.
-            </p>
-
-            <p>
-                The internet gives everyone the ability to create,
-                yet platforms, algorithms, and expectations can
-                pressure us to make what is popular instead of
-                what is meaningful.
-            </p>
-
-        </section>
-
-
-       
-        <section class="creative-section">
-
-            <div class="creative-word experiment">
-                <span>E</span>
-                <span>X</span>
-                <span>P</span>
-                <span>E</span>
-                <span>R</span>
-                <span>I</span>
-                <span>M</span>
-                <span>E</span>
-                <span>N</span>
-                <span>T</span>
-            </div>
-
-            <div class="creative-word fail">
-                <span>F</span>
-                <span>A</span>
-                <span>I</span>
-                <span>L</span>
-            </div>
-
-            <div class="creative-word remix">
-                <span>R</span>
-                <span>E</span>
-                <span>M</span>
-                <span>I</span>
-                <span>X</span>
-            </div>
-
-        </section>
-
-
-      
-        <section class="ending">
-
-            <p>
-                We should create because we have something to say,
-                not because we are guaranteed attention.
-            </p>
-
-            <h2>MAKE WHAT YOU WANT.</h2>
-
-            <h2>SHARE WHAT YOU BELIEVE.</h2>
-
-            <h2>CREATE WITHOUT FEAR.</h2>
-
-            <p class="final-message">
-                The web should not tell us what to create.
-                <strong>It should give us the freedom to create.</strong>
-            </p>
-
-        </section>
-
-
-       
-        <footer>
-
-            <a href="https://www.eff.org/" target="_blank">
-                Learn more about freedom on the web →
+            <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/jocb.618" target="_blank">
+                Internet Use and Creative Thinking in the Alternative Uses Task →
             </a>
+
+            <p class="source-credit">
+                Oliva & Storm, 2023 — The Journal of Creative Behavior
+            </p>
+            ```
 
         </footer>
 
-    </main>
+
+</main>
 
 </body>
 
